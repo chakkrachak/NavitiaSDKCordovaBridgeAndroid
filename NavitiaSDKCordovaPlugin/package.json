@@ -1,0 +1,17 @@
+{
+  "name": "NavitiaSDKCordovaPlugin",
+  "version": "0.0.2",
+  "description": "",
+  "cordova": {
+    "id": "cordova-plugins-navitiasdk",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "ISC"
+}

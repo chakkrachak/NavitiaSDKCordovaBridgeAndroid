@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugins-navitiasdk" version="0.0.2" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>NavitiaSDKCordovaPlugin</name>
+    <js-module name="NavitiaSDKCordovaPlugin" src="www/NavitiaSDKCordovaPlugin.js">
+        <clobbers target="NavitiaSDK" />
+    </js-module>
+
+    <platform name="android">
+	  <config-file target="config.xml" parent="/*">
+	    <feature name="Echo">
+	      <param name="android-package"
+	             value="org.kisio.plugin.Echo"/>
+	    </feature>
+	  </config-file>
+	  <source-file src="src/android/org/kisio/plugin/Echo.java" target-dir="src/org/kisio/plugin" />
+	</platform>
+</plugin>
