@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 declare var NavitiaSDK: any;
@@ -10,7 +10,7 @@ declare var NavitiaSDK: any;
 export class HomePage {
 	items;
 
-	constructor(public navCtrl: NavController) {
+	constructor(public navCtrl: NavController, private zone: NgZone) {
 		this.initializeItems();
 	}
 
@@ -77,7 +77,9 @@ export class HomePage {
 		var that = this;
 		NavitiaSDK.placesGetPlaces(textToDisplay,
 			function(placesResponse) {
-				that.items.push(placesResponse);
+				that.zone.run(function () {
+                   	that.items.push(placesResponse);
+                })
 			},
 			function(err) {
 
