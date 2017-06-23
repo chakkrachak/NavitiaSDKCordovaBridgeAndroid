@@ -37,7 +37,7 @@
         "rxjs": "5.4.0",
         "sw-toolbox": "3.6.0",
         "zone.js": "0.8.12",
-        "cordova-plugins-navitiasdk": "../NavitiaSDKCordovaPlugin"
+        "cordova-plugin-navitiasdk": "../NavitiaSDKCordovaPlugin"
     },
     "devDependencies": {
         "@ionic/app-scripts": "1.3.7",
@@ -54,7 +54,7 @@
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
             "ionic-plugin-keyboard": {},
-            "cordova-plugins-navitiasdk": {}
+            "cordova-plugin-navitiasdk": {}
         },
         "platforms": [
             "android"

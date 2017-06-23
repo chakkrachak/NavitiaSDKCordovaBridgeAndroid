@@ -73,11 +73,11 @@ export class HomePage {
 		this.popEcho(val);
 	}
 
-
 	popEcho(textToDisplay) {
-		NavitiaSDK.echo(textToDisplay,
-			function(msg) {
-
+		var that = this;
+		NavitiaSDK.placesGetPlaces(textToDisplay,
+			function(placesResponse) {
+				that.items.push(placesResponse);
 			},
 			function(err) {
 
